@@ -11,26 +11,15 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            align-items: center;
             height: 100vh;
         }
 
-        /* الشريط الجانبي - 30% */
-        .sidebar {
-            width: 30%;
-            background-color: #002147;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .sidebar h2 {
-            color: gold;
-        }
-
-        /* منطقة الخريطة - 70% */
+        /* منطقة الخريطة - تأخذ المساحة العلوية */
         .map-container {
-            width: 70%;
+            width: 100%;
+            height: 70vh;
             background-color: white;
             display: flex;
             justify-content: center;
@@ -43,21 +32,54 @@
             height: auto;
             border-radius: 10px;
         }
+
+        /* الشريط السفلي - الجدول */
+        .sidebar {
+            width: 100%;
+            background-color: #002147;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .sidebar h2 {
+            color: gold;
+        }
+
+        .filter-buttons button {
+            background-color: gold;
+            border: none;
+            color: #002147;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .filter-buttons button:hover {
+            background-color: #e6b800;
+        }
+
     </style>
 </head>
 <body>
-    <!-- الشريط الجانبي -->
-    <div class="sidebar">
-        <h2>Resale</h2>
-        <p>اختر المساحة المتاحة</p>
-        <button>70 متر</button>
-        <button>90 متر</button>
-        <button>120 متر</button>
-    </div>
 
     <!-- الخريطة -->
     <div class="map-container">
         <img src="Noor_B1.svg" alt="خريطة مدينة نور">
     </div>
+
+    <!-- الجدول أسفل الخريطة -->
+    <div class="sidebar">
+        <h2>Resale</h2>
+        <p>اختر المساحة المتاحة</p>
+        <div class="filter-buttons">
+            <button>70 متر</button>
+            <button>90 متر</button>
+            <button>120 متر</button>
+        </div>
+    </div>
+
 </body>
 </html>
