@@ -12,40 +12,58 @@
             padding: 0;
             background-color: #f8f9fa;
         }
-        .map-container {
-            width: 100%;
-            max-width: 1000px;
-            margin: auto;
-        }
-        img {
-            width: 100%;
-            height: auto;
-        }
-        .info-section {
-            background-color: #0b1124; /* اللون الكحلي */
-            color: #e4dece; /* اللون الأبيض اللؤلؤي */
-            padding: 20px;
-            text-align: center;
-            margin-top: -5px;
-        }
-        .info-section h2 {
-            color: #a67705; /* اللون الذهبي الداكن */
-            margin-bottom: 10px;
-            font-size: 24px;
+        
+        /* ✅ صندوق العنوان Resale */
+        .header-box {
+            background-color: #0b1124; /* كحلي */
+            color: #a67705; /* ذهبي */
+            padding: 15px;
+            font-size: 22px;
             font-weight: bold;
         }
+
+        /* ✅ ضبط الخريطة لتناسب شاشة الهاتف */
+        .map-container {
+            width: 100%;
+            height: 65vh; /* تأخذ 65% من ارتفاع الشاشة */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* يمنع التمدد الزائد */
+        }
+        .map-container img {
+            width: 95%; /* الحفاظ على الأبعاد */
+            height: auto;
+        }
+
+        /* ✅ صندوق الاختيارات */
+        .info-section {
+            background-color: #0b1124; /* كحلي */
+            color: #e4dece; /* أبيض لؤلؤي */
+            padding: 20px;
+            text-align: center;
+        }
+        .info-section h2 {
+            color: #a67705; /* ذهبي داكن */
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* ✅ أزرار المساحات */
         .buttons-container {
             display: flex;
             justify-content: center;
             gap: 15px;
+            flex-wrap: wrap;
             margin-top: 10px;
         }
         .buttons-container button {
-            background-color: #a67705; /* اللون الذهبي الداكن */
+            background-color: #a67705; /* ذهبي داكن */
             color: #e4dece; /* أبيض لؤلؤي */
             border: none;
-            padding: 12px 20px;
-            font-size: 18px;
+            padding: 12px 18px;
+            font-size: 16px;
             cursor: pointer;
             border-radius: 8px;
             font-weight: bold;
@@ -54,19 +72,22 @@
         .buttons-container button:hover {
             background-color: #8d6404; /* درجة أغمق من الذهبي */
         }
+
     </style>
 </head>
 <body>
 
-    <h1 style="color: #0b1124;">مرحباً بك في خريطة مدينة نور التفاعلية</h1>
-    
+    <!-- ✅ صندوق العنوان في أعلى الصفحة -->
+    <div class="header-box">Resale</div>
+
+    <!-- ✅ صندوق الخريطة -->
     <div class="map-container">
         <img src="Noor_B1.svg" alt="خريطة مدينة نور">
     </div>
 
+    <!-- ✅ صندوق اختيار المساحات -->
     <div class="info-section">
-        <h2>Resale</h2>
-        <p>اختر المساحة المتاحة</p>
+        <h2>اختر المساحة المتاحة</h2>
         <div class="buttons-container">
             <button>70 متر</button>
             <button>90 متر</button>
